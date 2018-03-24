@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+<!-- Написать приложение для работы с REST сервисом, 
+все функции делают запрос и возвращают Promise с которым 
+потом можно работать. Реализовать следующий функционал:
+
+1.функция getAllUsers() - должна вернуть текущий список 
+всех пользователей в БД.
+
+2.функция getUserById(id) - должна вернуть пользователя 
+с переданным id.
+
+3.функция addUser(name, age) - должна записывать в БД юзера 
+с полями name и age.
+
+4.функция removeUser(id) - должна удалять из БД юзера по указанному id.
+
+5.функция updateUser(id, user) - должна обновлять данные 
+пользователя по id. user это объект с новыми полями name и age. -->
+
+<!-- Сделать минимальный графический интерфейс в виде панели 
+с полями и кнопками. А так же панелью для вывода результатов 
+операций с бэкендом.-->
+
+<div class="wrapp">	
+<!-- task 1 -->
+	<div class="getAllUsers block">	
+		<h2>Текущий список всех пользователей в БД</h2>
+		<button id="btnGetUsers">Get All Users</button>
+		<div id="outputAllUsers"></div>
+	</div>
+
+<!-- task 2 -->
+	<div class="getUserById block">
+		<h2>Пользователь с определенным id</h2>	
+		<input id ="outputUserById" type="text" placeholder="user`s id">
+		<button id="btnGetUserById">Get User By Id</button>
+		<div id="content">Если после отправки id на экране не появилось имя и очки пользователя, значит такого пользователя нет в БД!</div>
+	
+	</div>
+
+<!-- task 3 -->
+	<div class="addUser block">	
+		<h2>Внести нового пользователя в БД</h2>
+		<input id ="outputAddUserName" type="text" placeholder="name">
+		<input id ="outputAddUserScore" type="text" placeholder="score">
+		<button id="btnAddUser">Create New User</button>
+		<p id="content2"></p>
+	</div>
+	
+<!-- task 4 -->
+	<div class="removeUser block">	
+		<h2>Удаление пользователя из БД</h2>
+		<input id ="outputRemoveUser" type="text" placeholder="user`s id">
+		<button id="btnRemoveUser">Remove User</button>
+		<p id="content3"></p>
+	</div>
+
+
+<!-- task 5 -->
+
+<div class="updateUser block">	
+		<h2>Обновление данных пользователя</h2>
+		<input id ="outputUpdateUser" type="text" placeholder="user`s id">
+		<input type="text" id="name" placeholder="enter new name of user">
+		<input type="text" id="score" placeholder="enter new score of user">
+		<button id="btnUpdateUser">Update User</button>
+		<p id="content4"></p>
+	</div>
+
+</div>
+
+
+	<script src='1.js'></script>
+</body>
+</html>
